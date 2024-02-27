@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            margin-left: 25vw;
+            margin-right: 25vw;
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+            background-color: gray;
+            height: 47.5vw;
+            width: 47.5vw;
+            display: flex;
+            flex-direction: row;
+            border-style: solid;
+
+        }
+
+        .white {
+            background-color: white;
+            height: 5.9vw;
+            width: 5.9vw;
+        }
+
+        .black {
+            background-color: black;
+            height: 5.9vw;
+            width: 5.9vw;
+        }
+
+        .body {
+            background-image: url(data:image/jpeg;base64,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);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .niks{
+                text-align: center;
+                color: chartreuse;
+        }
+    </style>
+</head>
+<body class="body">
+        <h1 class="niks">THE CHESS</h1>
+    <details>
+        <summary>
+            Chess Rules
+        </summary>
+        <p>
+            1.Set Up The Chess Board<br>
+            2.Learn To Move The Pieces<br>
+            3.Discover The Special Rules<br>
+            4.Learn Who Makes The First Move<br>
+            5.Check Out The Rules On How To Win<br>
+            6.Study The Basic Strategies<br>
+            7.Practice Playing Lots Of Games
+        </p>
+    </details>
+    <details>
+        <summary>
+            History of Chess
+        </summary>
+        <p>
+            Chess has a long and storied history. The game has changed quite a bit from its earliest forms in India. The
+            modern iteration we enjoy today wasn't known until the 16th century. There were no clocks, and the pieces
+            were not standardized until the 19th century.
+
+            The official world championship title came into existence by the late 19th century, shortly after the first
+            big tournaments were held and multiple styles of play had begun to fully develop. Although the first book on
+            openings was published as early as 1843, theory as we know it didn't truly evolve until the early/mid 20th
+            century. Computer engines and databases didn't come into play until the very late 20th century.
+        </p>
+        <img
+            src="data:image/jpeg;base64,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">
+    </details>
+    <!-- Main Division -->
+    <main class="container">
+        <!-- First Coulumn -->
+        <div>
+            <div class="white" style="display: block;"><img
+                    src="./images/LightRook.webp" style="margin-left: -8px; margin-top: -4px;"
+                    height="100vw"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/LightPawn.webp" style="margin-top: -6px; margin-left: -7px;"
+                    height="100vw"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/DarkPawn.webp" style="margin-left: -6px; margin-top: -4px;"
+                    height="100vw"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/DarkRook.webp" style="margin-left: -8px; margin-top: -5px;"
+                    height="100vw"></div>
+        </div>
+        <!-- Second Row -->
+        <div>
+            <div class="black" style="display: block;"><img 
+                    src="./images/LightKnight.webp" style="margin-left: -3px; margin-top: 4px;"
+                    height="90vw"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/LightPawn.webp" style="margin-top: -6px; margin-left: -7px;"
+                    height="100vw"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/DarkPawn.webp" style="margin-left: -6px; margin-top: -5px;"
+                    height="100vw"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/DarkKnight.webp" style="margin-left: -3px; margin-top: 4px;"
+                    height="90vw"></div>
+        </div>
+        <!-- Third Row -->
+        <div>
+            <div class="white" style="display: block;"><img
+                    src="./images/LightBishop.webp" style="margin-left: -8px; margin-top: -5px;"
+                    height="100vw"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/LightPawn.webp" style="margin-top: -6px; margin-left: -7px;"
+                    height="100vw"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/DarkPawn.webp" style="margin-left: -6px; margin-top: -3px;"
+                    height="100vw"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/DarkBishop.webp" style="margin-left: -8px; margin-top: -5px;"
+                    height="100vw"></div>
+        </div>
+        <!-- Fourth Row -->
+        <div>
+            <div class="black" style="display: block;"><img
+                    src="./images/White_Queen.webp" style="margin-left: 3px; padding-top: 7px;"
+                    height="80vw"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/LightPawn.webp" style="margin-top: -6px; margin-left: -7px;"
+                    height="100vw"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/DarkPawn.webp" style="margin-left: -6px; margin-top: -5px;"
+                    height="100vw"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/Black_Queen.webp" style="margin-left: 3px; padding-top: 7px;"
+                    height="80vw"></div>
+        </div>
+        <!-- Fifth Row -->
+        <div>
+            <div class="white" style="display: block;"><img
+                    src="./images/LightKing.webp" style="margin-left: -5px; margin-top: 3%;"
+                    height="90vw"></div>
+            <div class="black" style="display: block;"><img
+                        src="./images/LightPawn.webp" style="margin-top: -6px; margin-left: -7px;"
+                        height="100vw"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/DarkPawn.webp" style="margin-left: -6px; margin-top: -3px;"
+                    height="100vw"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/DarkKing.webp" style="margin-left: -5px; margin-top: 3%;"
+                    height="90vw"></div>
+        </div>
+        <!-- Sixth Row -->
+        <div>
+            <div class="black" style="display: block;"><img
+                    src="./images/LightBishop.webp" style="margin-left: -8px; margin-top: -5px;"
+                    height="100vw"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/LightPawn.webp" style="margin-top: -6px; margin-left: -7px;"
+                    height="100vw"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/DarkPawn.webp" style="margin-left: -6px; margin-top: -5px;"
+                    height="100vw"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/DarkBishop.webp" style="margin-left: -8px; margin-top: -5px;"
+                    height="100vw"></div>
+        </div>
+        <!-- Seventh Row -->
+        <div>
+            <div class="white" style="display: block;"><img
+                    src="./images/LightKnight.webp" style="margin-left: -3px; margin-top: 4px;"
+                    height="90vw"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/LightPawn.webp" style="margin-top: -6px; margin-left: -7px;"
+                    height="100vw"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/DarkPawn.webp" style="margin-left: -6px; margin-top: -3px;"
+                    height="100vw"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/DarkKnight.webp" style="margin-left: -3px; margin-top: 4px;"
+                    height="90vw"></div>
+        </div>
+        <!-- Eighth Row -->
+        <div>
+            <div class="black" style="display: block;"><img
+                    src="./images/LightRook.webp" style="margin-left: -8px; margin-top: -5px;"
+                    height="100vw"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/LightPawn.webp" style="margin-top: -6px; margin-left: -7px;"
+                    height="100vw" style="margin-left: 9px; margin-top: 5px;"
+                    height="80px"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black" style="display: block;"><img
+                    src="./images/DarkPawn.webp" style="margin-left: -6px; margin-top: -5px;"
+                    height="100vw"></div>
+            <div class="white" style="display: block;"><img
+                    src="./images/DarkRook.webp" style="margin-left: -8px; margin-top: -4px;"
+                    height="100vw"></div>
+        </div>
+        <!-- Closing Main Division -->
+    </main>
+</body>
+
+</html>
