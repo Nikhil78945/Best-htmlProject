@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume</title>
+    <style>
+        .ani {
+            color: #9195F6;
+            animation-name: my-animation;
+            animation-duration: 5s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            text-align: center;
+        }
+        .main{
+            background-color: white;
+            height: 700px;
+            width: 600px;
+            border-style: solid;
+            border-color: #9B4444;
+            margin-left: 410px;
+        }
+        .img{
+            border-radius: 10px;
+            width: 110px;
+            height: 100px;
+            border-style: solid;
+            border-color: grey;
+            padding: 3px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .h2{
+            color: #211C6A;
+            margin-left: 170px;
+            margin-top: -110px;
+            display: block;
+        }
+        .student{
+            color: #FFBE98;
+            margin-left: 170px;
+            display: block;
+            margin-top: -20px;
+        }
+        h5{
+            color: grey;
+            margin-left: 170px;
+            display: block;
+            margin-top: -20px;
+        }
+        .SecondMain{
+            background-color: rgb(98, 98, 98);
+            height: 190px;
+            width: 175px;
+            margin-left: 420px;
+            display: block;
+            margin-top: -170px;
+            border-radius: 10px;
+        }
+        @keyframes my-animation {
+
+            0% {
+                color: aqua;
+                top: 0px;
+                left: 0px;
+                font-size: 2px;
+            }
+
+            25% {
+                top: 250px;
+                left: 250px;
+                font-size: 10px;
+                color: #15F5BA;
+            }
+
+            75% {
+                top: 0px;
+                left: 550px;
+                font-size: 35px;
+                color: #F5E8DD;
+            }
+
+            100% {
+                top: 400px;
+                left: 550px;
+                font-size: 33px;
+                color: #9195F6;
+            }
+}
+    </style>
+</head>
+
+<body>
+    <h1 class="ani">My Resume</h1><hr color="#15F5BA">
+    <div class="main">
+        <img class="img" src="./images/nikhil.jpg">
+        <h2 class="h2">Nikhil Bhaiswar</h2>
+        <h3 class="student">Student</h3>
+        <h5>I am Nikhil Bhaiswar student of <br>B.R.High School,Katol.When I <br>am in 8th class I do admission in<br> B.R.High School,Katol.My School <br>is famous in my city.</h5>
+        <div class="SecondMain">
+            <img src="./images/github.png" style="margin-top: 10px;">
+            <a href="https://github.com/Nikhil78945/Best-htmlProject" style=" display: block; margin-left: 50px; margin-top: -28px; font-size: 5p;">MY GITHUB ACCOUNT</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main {
+            background-color: #3C3633;
+            width: 450px;
+            height: 500px;
+            border-style: double;
+            margin: 100px;
+            margin-left: 500px;
+        }
+
+        .box {
+            background-color: #FEECE2;
+            width: 427px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .one {
+            height: 40px;
+            width: 90px;
+            margin-top: 25px;
+            border: 2px;
+            font-size: 15px;
+            margin-right: 3px;
+        }
+
+        .three {
+            height: 40px;
+            width: 206px;
+            margin-top: 25px;
+            border: 2px;
+            font-size: 15px;
+        }
+
+        button {
+            border-radius: 25px;
+        }
+
+        .body {
+            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20220511/pngtree-vector-background-of-scientific-and-technological-system-for-calculating-complex-data-image_1298993.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .blue{
+            background-color: #070F2B;
+            color: white;
+        }
+        .orange{
+            background-color: #000000;
+            color: white;
+        }
+        .white{
+            background-color: #000000;
+            color: white;
+        }
+        .seven{
+            background-color: #000000;
+            color: white;
+            height: 70px;
+            width: 90px;
+        }
+    </style>
+    <script>
+        function typing(pass){
+            let x = pass;
+            document.getElementById("inputbox").innerHTML = pass;
+        }
+    </script>
+</head>
+
+</html>
+
+<body class="body">
+    <!-- Main Div -->
+    <div class="main">
+        <!-- 2nd Main Div -->
+        <div>
+            <div class="box"><h1 id="inputbox">RESULT</h1></div>
+        </div>
+        <!-- 1st Line Section -->
+        <button class="blue">
+            <div class="one">AC</div>
+        </button>
+        <button class="blue">
+            <div class="one">+/-</div>
+        </button>
+        <button class="blue">
+            <div class="one">%</div>
+        </button>
+        <button class="orange">
+            <div class="one">/</div>
+        </button>
+        <!-- 2nd Line Section -->
+        <button class="white">
+            <button class="seven" onclick="typing(7)">7</button>
+        </button>
+        <button class="white">
+            <button class="seven" onclick="typing(8)">8</button>
+        </button>
+        <button class="white">
+            <button class="seven" onclick="typing(9)">9</button>
+        </button>
+        <button class="orange">
+            <div class="one">×</div>
+        </button>
+        <!-- 3rd Line Section -->
+        <button class="white">
+            <button class="seven" onclick="typing(4)">4</button>
+        </button>
+        <button class="white">
+            <button class="seven" onclick="typing(5)">5</button>
+        </button>
+        <button class="white">
+            <button class="seven" onclick="typing(6)">6</button>
+        </button>
+        <button class="orange">
+            <div class="one">-</div>
+        </button>
+        <!-- 4rd Line Section -->
+        <button class="white">
+            <button class="seven" onclick="typing(1)">1</button>
+        </button>               
+        <button class="white">
+            <button class="seven" onclick="typing(2)">2</button>
+        </button>
+        <button class="white">
+            <button class="seven" onclick="typing(3)">3</button>
+        </button>
+        <button class="orange">
+            <div class="one">+</div>
+        </button>
+        <!-- 5th Line Section -->
+        <button class="white">
+            <button class="seven" onclick="typing(0)">0</button>
+        </button>
+        <button class="white">
+            <div class="one">.</div>
+        </button>
+        <button class="orange">
+            <div class="one">=</div>
+        </button>
+    </div>
+</body

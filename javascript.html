@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .main{
+            width: 500px;
+            height: 400px;
+            background-color: lightpink;
+        }
+        .submit{
+            background-color: aqua;
+            height: 40px;
+            width: 60px;
+        }
+        input{
+            
+            background-color: blueviolet;
+        }
+    </style>    
+    <script>
+        function add(){
+            let firstNO = document.getElementById("number-one").value;
+            let secondNO = document.getElementById("number-two").value;
+            let total = Number(firstNO) + Number(secondNO);
+            document.getElementById("display").innerHTML = "ADDITION IS: " + total;
+        }
+        function min(){
+            let firstNO = document.getElementById("number-one").value;
+            let secondNO = document.getElementById("number-two").value;
+            let total = Number(firstNO) - Number(secondNO);  
+            document.getElementById("display").innerHTML = "SUBTRACTION IS: " + total;
+        }
+        function mul(){
+            let firstNO = document.getElementById("number-one").value;
+            let secondNO = document.getElementById("number-two").value;
+            let total = Number(firstNO) * Number(secondNO);
+            document.getElementById("display").innerHTML = "MULTIPLICATION IS: " + total;
+        }function div(){
+            let firstNO = document.getElementById("number-one").value;
+            let secondNO = document.getElementById("number-two").value;
+            let total = Number(firstNO) / Number(secondNO);
+            document.getElementById("display").innerHTML = "DIVISION IS: " + total;
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+    <h1 id="display">Result</h1>
+    <hr>
+    <input
+    type="text"
+    id="number-one"
+    style="width: 150px; height: 38px;"
+    class="input"
+    >
+    <input
+    type="text"
+    id="number-two"
+    style="width: 150px; height: 38px;"
+    >
+    <button type="submit" class="submit" onclick="add()"><b>+</b></button>
+    <button type="submit" class="submit" onclick="min()"><b>-</b></button>
+    <button type="submit" class="submit" onclick="mul()"><b>*</b></button>
+    <button type="submit" class="submit" onclick="div()"><b>/</b></button>
+
+</div>
+</body>
+</html>
