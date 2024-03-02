@@ -41,6 +41,9 @@
             let total = Number(firstNO) / Number(secondNO);
             document.getElementById("display").innerHTML = "DIVISION IS: " + total;
         }
+        function clearFunction() {
+            document.getElementById("display").innerHTML = "";
+        }
     </script>
 </head>
 <body>
@@ -62,6 +65,7 @@
     <button type="submit" class="submit" onclick="min()"><b>-</b></button>
     <button type="submit" class="submit" onclick="mul()"><b>*</b></button>
     <button type="submit" class="submit" onclick="div()"><b>/</b></button>
+    <button type="submit" class="submit" onclick="clearFunction()">clear</button>
 
 </div>
 </body>
