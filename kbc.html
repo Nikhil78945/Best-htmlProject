@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .start-button {
+            color: white;
+            background-color: goldenrod;
+            height: 40px;
+            width: 150px;
+            border-radius: 40%;
+            margin-left: 300px;
+            margin-top: 300px;
+        }
+
+        .display {
+            color: aquamarine;
+            margin-left: 300px;
+            border-style: groove;
+            width: 700px;
+            background-color: #E1AFD1;
+            border-style: solid;
+            border-color: #9B4444;
+            border-radius: 20px;
+        }
+
+        .button {
+            background-color: #C5EBAA;
+            height: 60px;
+            font-size: 17px;
+            border-radius: 10px;
+            display: block;
+            margin-left: 350px;
+            margin-top: 50px;
+            width: 200px;
+        }
+
+        .second {
+            background-color: #C5EBAA;
+            height: 60px;
+            font-size: 17px;
+            border-radius: 10px;
+            display: block;
+            margin-left: 750px;
+            margin-top: -60px;
+            width: 200px;
+        }
+
+        .third {
+            background-color: #C5EBAA;
+            height: 60px;
+            font-size: 17px;
+            border-radius: 10px;
+            display: block;
+            margin-left: 350px;
+            margin-top: 60px;
+            width: 200px;
+        }
+
+        .fourth {
+            background-color: #C5EBAA;
+            height: 60px;
+            font-size: 17px;
+            border-radius: 10px;
+            display: block;
+            margin-left: 750px;
+            margin-top: -60px;
+            width: 200px;
+        }
+    </style>
+    <script>
+        let xyz = new Audio("./audio/KBC.mp3");
+        let questionNumber = 0;
+        function questionOne() {
+            document.getElementById("text-display").innerHTML ="1. Current Railway Minister of India is?";
+            document.getElementById("answer-one").innerHTML = "A.Mamta Banarjee";
+            document.getElementById("answer-two").innerHTML = "B.Ram Vilash";
+            document.getElementById("answer-three").innerHTML = "C.Ashwini Vaishnaw";
+            document.getElementById("answer-four").innerHTML = "D.Piyush Goyal"
+            xyz.play();
+        }
+        function questionTwo() {
+            document.getElementById("text-display").innerHTML ="2. Which god is also known as ‘Gauri Nandan’?";
+            document.getElementById("answer-one").innerHTML = "A.Agni";
+            document.getElementById("answer-two").innerHTML = "B.Indra";
+            document.getElementById("answer-three").innerHTML = "C.Hamuman";
+            document.getElementById("answer-four").innerHTML = "D.Ganesha";
+            xyz.play();
+        }
+        function questionThree() {
+            document.getElementById("text-display").innerHTML ="3. What does not grow on tree according to a popular Hindi saying?";
+            document.getElementById("answer-one").innerHTML = "A.Money";
+            document.getElementById("answer-two").innerHTML = "B.Flowers";
+            document.getElementById("answer-three").innerHTML = "C.Leaves";
+            document.getElementById("answer-four").innerHTML = "D.Fruits";
+            xyz.play();
+        }
+        function question(question) {
+            if (question == 1) {
+                questionNumber = 1;
+                questionOne();
+            } if (question == 2) {
+                questionNumber = 2;
+                questionTwo();
+            } if (question == 3) {
+                questionNumber = 1;
+                questionThree();
+            } else {
+                document.getElementById("").innerHTML =
+                    "Congratulation you won the prize of Rupees 7";
+            }
+        }
+        // 
+
+        // answer
+        function answer(givenAnswer) {
+            if (questionNumber == 1) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 2);
+                } else {
+                    answerOne(false, 0);
+                }
+            } if (questionNumber == 2) {
+                if (givenAnswer == 4) {
+                    answerOne(true,3);
+                } else {
+                    answerOne(false,0);
+                }
+            } if (questionNumber == 3) {
+                if (givenAnswer == 1) {
+                    answerOne(true,4);
+                } else {
+                    answerOne(false,0);
+                }
+            } 
+        }
+        // 
+        function answerOne(correctAnswer, nextQuestion) {
+            if (correctAnswer) {
+                document.getElementById("text-display").innerHTML =
+                    "Bilkul sahi jawab";
+                document.getElementById("container").style.backgroundColor =
+                    "#004225";
+                setTimeout(() => {
+                    question(nextQuestion);
+                }, 1000);
+            } else {
+                document.getElementById("text-display").innerHTML =
+                    "Galat Jawab";
+                document.getElementById("container").style.backgroundColor =
+                    "#FF0000";
+                setTimeout(() => {
+                    startScreen();
+                }, 2000);
+            }
+        }
+        // 
+        function dostart() {
+            document.getElementById("main-body").hidden = false;
+            document.getElementById("play-button").hidden = true;
+            question(1);
+        }
+
+        function startScreen() {
+            document.getElementById("main-body").hidden = true;
+            document.getElementById("play-button").hidden = false;
+        }
+
+        // 
+    </script>
+</head>
+
+<body
+    style="background-image: url(https://pbs.twimg.com/ext_tw_video_thumb/1430113963283410944/pu/img/HJZ5Cp97N6wkNQsL.jpg:large); height: 100%; width: 100vw; background-repeat: no-repeat;">
+    <!-- start button -->
+    <button class="start-button" id="play-button" onclick="dostart()">LET"S START</button>
+    <!-- display -->
+    <div class="main-container" id="main-body" hidden="true">
+        <div class="display" id="container">
+            <h1 id="text-display" class="text-display"></h1>
+        </div>
+        <!-- buttons -->
+        <button class="button" id="answer-one" onclick="answer(1)"></button>
+        <button class="second" id="answer-two" onclick="answer(2)"></button>
+        <button class="third" id="answer-three" onclick="answer(3)"></button>
+        <button class="fourth" id="answer-four" onclick="answer(4)"></button>
+    </div>
+    </div>
+</body>
+
+
+</html>
