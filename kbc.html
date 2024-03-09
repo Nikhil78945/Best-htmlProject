@@ -6,8 +6,8 @@
         .start-button {
             color: white;
             background-color: goldenrod;
-            height: 40px;
-            width: 150px;
+            height: 80px;
+            width: 200px;
             border-radius: 40%;
             margin-left: 300px;
             margin-top: 300px;
@@ -68,6 +68,7 @@
             width: 200px;
         }
     </style>
+    <!-- Starting of script -->
     <script>
         let xyz = new Audio("./audio/KBC.mp3");
         let questionNumber = 0;
@@ -95,28 +96,126 @@
             document.getElementById("answer-four").innerHTML = "D.Fruits";
             xyz.play();
         }
+        function questionFour() {
+            document.getElementById("text-display").innerHTML ="4. Which city is known as Pink City in India?";
+            document.getElementById("answer-one").innerHTML = "A.Banglore";
+            document.getElementById("answer-two").innerHTML = "B.Maysore";
+            document.getElementById("answer-three").innerHTML = "C.Jaipur";
+            document.getElementById("answer-four").innerHTML = "D.Kochi";
+            xyz.play();
+        }
+        function questionFive() {
+            document.getElementById("text-display").innerHTML ="5. Who wrote India's National Anthem?";
+            document.getElementById("answer-one").innerHTML = "A.Rabindranath Tagore";
+            document.getElementById("answer-two").innerHTML = "B.Lal Bahadur Shastri";
+            document.getElementById("answer-three").innerHTML = "C.Chetan Bhagat";
+            document.getElementById("answer-four").innerHTML = "D.RK Narayan";
+            xyz.play();
+        }
+        function questionSix() {
+            document.getElementById("text-display").innerHTML ="6. How many religions are there in India?";
+            document.getElementById("answer-one").innerHTML = "A.6";
+            document.getElementById("answer-two").innerHTML = "B.7";
+            document.getElementById("answer-three").innerHTML = "C.8";
+            document.getElementById("answer-four").innerHTML = "D.9";
+            xyz.play();
+        }
+        function questionSeven() {
+            document.getElementById("text-display").innerHTML =" 7. When is the National Hindi Diwas celebrated?";
+            document.getElementById("answer-one").innerHTML = "A.13 September";
+            document.getElementById("answer-two").innerHTML = "B.14 September";
+            document.getElementById("answer-three").innerHTML = "C.14 July";
+            document.getElementById("answer-four").innerHTML = "D.15 August";
+            xyz.play();
+        }
+        function questionEight() {
+            document.getElementById("text-display").innerHTML ="8. How many states are there in India?";
+            document.getElementById("answer-one").innerHTML = "A.28";
+            document.getElementById("answer-two").innerHTML = "B.29";
+            document.getElementById("answer-three").innerHTML = "C.31";
+            document.getElementById("answer-four").innerHTML = "D.31";
+            xyz.play();
+        }
+        function questionNine() {
+            document.getElementById("text-display").innerHTML ="9. Where in India Gate located?";
+            document.getElementById("answer-one").innerHTML = "A.Agra";
+            document.getElementById("answer-two").innerHTML = "B.Punjab";
+            document.getElementById("answer-three").innerHTML = "C.Mumbai";
+            document.getElementById("answer-four").innerHTML = "D.New Delhi";
+            xyz.play();
+        }
+        function questionTen() {
+            document.getElementById("text-display").innerHTML ="10. Who wrote Vande Mataram?";
+            document.getElementById("answer-one").innerHTML = "A.Sarat Chandra Chattopadhyay";
+            document.getElementById("answer-two").innerHTML = "B.Rabindranath Tagore";
+            document.getElementById("answer-three").innerHTML = "C.Bankim Chandra Chatterjee";
+            document.getElementById("answer-four").innerHTML = "D.Ishwar Chandra Vidyasagar";
+            xyz.play();
+        }
+        // Starting of Question
         function question(question) {
             if (question == 1) {
                 questionNumber = 1;
                 questionOne();
-            } if (question == 2) {
+                document.getElementById("container").style.backgroundColor =
+                "#E1AFD1";
+            } else if (question == 2) {
                 questionNumber = 2;
                 questionTwo();
-            } if (question == 3) {
-                questionNumber = 1;
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+            } else if (question == 3) {
+                questionNumber = 3;
                 questionThree();
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+            } else if (question == 4) {
+                questionNumber = 4;
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+                questionFour();
+            } else if (question == 5) {
+                questionNumber = 5;
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+                questionFive();
+            }  else if (question == 6) {
+                questionNumber = 6;
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+                questionSix();
+            }  else if (question == 7) {
+                questionNumber = 7;
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+                questionSeven();
+            }   else if (question == 8) {
+                questionNumber = 8;
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+                questionEight();
+            }   else if (question == 9) {
+                questionNumber = 9;
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+                questionNine();
+            }   else if (question == 10) {
+                questionNumber = 10;
+                document.getElementById("container").style.backgroundColor =
+                    "#E1AFD1";
+                questionTen();
             } else {
-                document.getElementById("").innerHTML =
-                    "Congratulation you won the prize of Rupees 7";
+                document.getElementById("text-display").innerHTML =
+                    "Congratulation you won the prize of Rupees 7 Crore...";
+                    document.getElementById("container").style.backgroundColor =
+                    "#891652";
             }
         }
-        // 
-
         // answer
         function answer(givenAnswer) {
             if (questionNumber == 1) {
                 if (givenAnswer == 3) {
-                    answerOne(true, 2);
+                    answerOne(true, 2); 
                 } else {
                     answerOne(false, 0);
                 }
@@ -132,13 +231,55 @@
                 } else {
                     answerOne(false,0);
                 }
-            } 
+            } if (questionNumber == 4) {
+                if (givenAnswer == 3) {
+                    answerOne(true,5);
+                } else {
+                    answerOne(false,0);
+                }
+            } if (questionNumber == 5) {
+                if (givenAnswer == 1) {
+                    answerOne(true,6);
+                } else {
+                    answerOne(false,0);
+                }
+            } if (questionNumber == 6) {
+                if (givenAnswer == 1) {
+                    answerOne(true,7);
+                } else {
+                    answerOne(false,0);
+                }
+            } if (questionNumber == 7) {
+                if (givenAnswer == 2) {
+                    answerOne(true,8);
+                } else {
+                    answerOne(false,0);
+                }
+            } if (questionNumber == 8) {
+                if (givenAnswer == 1) {
+                    answerOne(true,9);
+                } else {
+                    answerOne(false,0);
+                }
+            } if (questionNumber == 9) {
+                if (givenAnswer == 4) {
+                    answerOne(true,10);
+                } else {
+                    answerOne(false,0);
+                }
+            } if (questionNumber == 10) {
+                if (givenAnswer == 3) {
+                    answerOne(true,);
+                } else {
+                    answerOne(false,0);
+                }
+            }
         }
         // 
         function answerOne(correctAnswer, nextQuestion) {
             if (correctAnswer) {
                 document.getElementById("text-display").innerHTML =
-                    "Bilkul sahi jawab";
+                    "Congratulations..Your Answer is Correct";
                 document.getElementById("container").style.backgroundColor =
                     "#004225";
                 setTimeout(() => {
@@ -146,7 +287,7 @@
                 }, 1000);
             } else {
                 document.getElementById("text-display").innerHTML =
-                    "Galat Jawab";
+                    "Your Answer is Wrong..";
                 document.getElementById("container").style.backgroundColor =
                     "#FF0000";
                 setTimeout(() => {
