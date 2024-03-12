@@ -9,8 +9,8 @@
     <!-- Style -->
     <style>
         .main {
-            background-color: gray;
-            height: 530px;
+            background-color: black;
+            height: 520px;
             width: 400px;
             border-radius: 20px;
             margin-left: 520px;
@@ -19,13 +19,15 @@
         }
 
         .top {
-            background-color: aqua;
+            background-color: #C7C8CC;
             height: 90px;
             width: 350px;
             margin-left: 22px;
             border-radius: 20px;
             padding-top: 10px;
             border-style: solid;
+            border-color: #78A083;
+            margin-top: 10px;
         }
 
         .h1 {
@@ -34,23 +36,26 @@
         }
 
         .second-row {
-            background-color: grey;
+            background-color: black;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
             height: 375px;
             border-radius: 20px;
             margin-top: 15px;
+            margin-left: 5px;
+            
         }
 
         button {
-            height: 80%;
-            width: 100%;
+            height: 60px;
+            width: 90px;
             background-color: #50727B;
             color: white;
             border-style: 5px solid;
             font-size: 20px;
             border-radius: 50px;
+            border: none;
         }
     </style>
     <!-- Opening of Script Tag -->
@@ -135,13 +140,13 @@
         <div class="top">
             <h1 id="display"></h1>
         </div>
-        <hr color="black" size="3px">
+        <hr color="white" size="2px">
         <!-- All Number and Symbols -->
         <div class="second-row">
             <!-- First Row -->
-            <div><button class="Numberkeys" onclick="clearFunction()">AC</button></div>
-            <div><button>+/-</button></div>
-            <div><button onclick="per()">%</button></div>
+            <div><button class="Numberkeys" onclick="clearFunction()" style="background-color: red;">AC</button></div>
+            <div><button style="background-color: red;">+/-</button></div>
+            <div><button onclick="per()" style="background-color: red;">%</button></div>
             <div><button style="background-color: orange;" onclick="div()">/</button></div>
 
             <!-- Second Row -->
