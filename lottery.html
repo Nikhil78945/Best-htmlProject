@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lottery: The Game</title>
+    <style>
+        .niks {
+            height: 450px;
+            width: 700px;
+            background-color: cyan;
+            margin-left: 250px;
+        }
+
+        .class-container {
+            background-color: darkgrey;
+            width: 700px;
+            height: 200px;
+            margin-left: 250px;
+        }
+
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            width: 50px;
+            --b: 8px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            padding: 1px;
+            background: conic-gradient(#0000 10%, #f03355) content-box;
+            -webkit-mask:
+                repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+                radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+            -webkit-mask-composite: destination-in;
+            mask-composite: intersect;
+            animation: l4 1s infinite steps(10);
+            margin-left: 300px;
+            margin-top: 100px;
+        }
+
+        @keyframes l4 {
+            to {
+                transform: rotate(1turn)
+            }
+        }
+
+        .input-box {
+            height: 40px;
+            width: 120px;
+        }
+
+        .button {
+            height: 40px;
+            width: 140px;
+        }
+        .display-text{
+            height: 100px;
+        }
+    </style>
+    <script>
+        let coins = 100;
+
+        function startPlay() {
+            document.getElementById("loader").style.display = "block";
+            setTimeout(() => {
+                startLottery();
+            }, 1000);
+        }
+        
+
+    </script>
+</head>
+
+<body style="margin: 0px;">
+    <div class="main-containr">
+        <div class="niks" id="display">
+            <h1 class="display-text" id="display-text"></h1>
+            <div id="loader" class="loader"></div>
+        </div>
+
+        <div class="class-container">
+            <input id="input" type="number" class="input-box" placeholder="BetNumber">
+            <input id="coin" type="Number" class="input-box" placeholder="Coins">
+            <button class="button" onclick="statPlay()">Click Here to Bet</button>
+        </div>
+    </div>
+</body>
+
+</html>

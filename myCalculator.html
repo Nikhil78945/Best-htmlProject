@@ -8,6 +8,9 @@
     </title>
     <!-- Style -->
     <style>
+        body{
+            background-image: url(./images/back-claculator.webp);
+        }
         .main {
             background-color: black;
             height: 520px;
@@ -16,6 +19,7 @@
             margin-left: 520px;
             margin-top: 50px;
             border-style: solid;
+            border-color: grey;
         }
 
         .top {
@@ -47,10 +51,60 @@
             
         }
 
-        button {
+        .number {
             height: 60px;
             width: 90px;
             background-color: #50727B;
+            color: white;
+            border-style: 5px solid;
+            font-size: 20px;
+            border-radius: 50px;
+            border: none;
+        }
+        .number:hover{
+            height: 60px;
+            width: 90px;
+            background-color: #76ABAE;
+            color: white;
+            border-style: 5px solid;
+            font-size: 20px;
+            border-radius: 50px;
+            border: none;
+        }
+        .Numberkeys{
+            height: 60px;
+            width: 90px;
+            background-color: red;
+            color: white;
+            border-style: 5px solid;
+            font-size: 20px;
+            border-radius: 50px;
+            border: none;
+        }
+        .Numberkeys:hover{
+            height: 60px;
+            width: 90px;
+            background-color: #FC6736;
+            color: white;
+            border-style: 5px solid;
+            font-size: 20px;
+            border-radius: 50px;
+            border: none;
+        }
+        .orange{
+            background-color: #FF8911;
+            height: 60px;
+            width: 90px;
+            color: white;
+            border-style: 5px solid;
+            font-size: 20px;
+            border-radius: 50px;
+            border: none;
+        }
+        .orange:hover{
+            background-color: #FFA447;
+            height: 60px;
+            width: 90px;
             color: white;
             border-style: 5px solid;
             font-size: 20px;
@@ -144,33 +198,33 @@
         <!-- All Number and Symbols -->
         <div class="second-row">
             <!-- First Row -->
-            <div><button class="Numberkeys" onclick="clearFunction()" style="background-color: red;">AC</button></div>
-            <div><button style="background-color: red;">+/-</button></div>
-            <div><button onclick="per()" style="background-color: red;">%</button></div>
-            <div><button style="background-color: orange;" onclick="div()">/</button></div>
+            <div><button class="Numberkeys" onclick="clearFunction()">AC</button></div>
+            <div><button class="Numberkeys" >+/-</button></div>
+            <div><button class="Numberkeys" onclick="per()">%</button></div>
+            <div><button class="orange" onclick="div()">/</button></div>
 
             <!-- Second Row -->
-            <div><button onclick="numbertype(7)">7</button></div>
-            <div><button onclick="numbertype(8)">8</button></div>
-            <div><button onclick="numbertype(9)">9</button></div>
-            <div><button style="background-color: orange;" onclick="mul()">×</button></div>
+            <div><button class="number" onclick="numbertype(7)">7</button></div>
+            <div><button class="number" onclick="numbertype(8)">8</button></div>
+            <div><button class="number" onclick="numbertype(9)">9</button></div>
+            <div><button class="orange" onclick="mul()">×</button></div>
 
             <!-- Third Row -->
-            <div><button onclick="numbertype(4)">4</button></div>
-            <div><button onclick="numbertype(5)">5</button></div>
-            <div><button onclick="numbertype(6)">6</button></div>
-            <div><button style="background-color: orange;" onclick="sub()">-</button></div>
+            <div><button class="number" onclick="numbertype(4)">4</button></div>
+            <div><button class="number" onclick="numbertype(5)">5</button></div>
+            <div><button class="number" onclick="numbertype(6)">6</button></div>
+            <div><button class="orange" onclick="sub()">-</button></div>
 
             <!-- Fourth Row -->
-            <div><button onclick="numbertype(1)">1</button></div>
-            <div><button onclick="numbertype(2)">2</button></div>
-            <div><button onclick="numbertype(3)">3</button></div>
-            <div><button style="background-color: orange;" onclick="add()">+</button></div>
+            <div><button class="number" onclick="numbertype(1)">1</button></div>
+            <div><button class="number" onclick="numbertype(2)">2</button></div>
+            <div><button class="number" class="number" class="number" class="number" onclick="numbertype(3)">3</button></div>
+            <div><button class="orange" onclick="add()">+</button></div>
 
-            <div><button onclick="numbertype(0)">0</button></div>
-            <div><button>.</button></div>
-            <div><button style="font-size: 15px;" onclick="backspace()">DEL</button></div>
-            <div><button style="background-color: orange;" onclick="showresult()">=</button></div>
+            <div><button class="number" onclick="numbertype(0)">0</button></div>
+            <div><button class="number">.</button></div>
+            <div><button class="number" style="font-size: 15px;" onclick="backspace()">DEL</button></div>
+            <div><button class="orange" onclick="showresult()">=</button></div>
         </div>
     </div>
 </body>
