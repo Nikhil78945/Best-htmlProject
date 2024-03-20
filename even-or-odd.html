@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EVEN or ODD</title>
+    <style>
+        .container {
+            width: 70vw;
+            height: 65vh;
+            background-color: #2D9596;
+            justify-content: center;
+            border-radius: 50px;
+            margin-left: 200px;
+        }
+
+        .display {
+            width: 100%;
+            height: 20%;
+            background-color: #265073;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display-text {
+            color: white;
+            font-size: 40px;
+        }
+
+        .custom-button {
+            margin-top: 20px;
+            margin-left: 26%;
+            background-color: #9AD0C2;
+            color: black;
+            width: 40%;
+            height: 44px;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+        .custom-button:hover {
+            margin-top: 20px;
+            margin-left: 26%;
+            background-color: #98ABEE;
+            color: black;
+            width: 40%;
+            height: 44px;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+
+        .input-section {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .input-no {
+            width: 40%;
+            height: 44px;
+            margin-left: 5%;
+            border-radius: 30px;
+            border-style: 2px solid;
+        }
+    </style>
+    <script>
+        function evenOrOdd() {
+            let x = document.getElementById("input-one").value;
+            if (x % 2 == 0) {
+                document.getElementById("display-text").innerHTML = "THIS NUMBER IS EVEN";
+            } else {
+                document.getElementById("display-text").innerHTML = "THIS NUMBER IS ODD";
+            }
+        }
+
+        function isEligable() {
+            let x = document.getElementById("input-one").value;
+            if (x >= 18) {
+                document.getElementById("display-text").innerHTML =
+                    "THIS NUMBER IS ELIGABLE TO VOTE";
+            } else {
+                document.getElementById("display-text").innerHTML =
+                    "THIS NUMBER IS NOT ELIGABLE TO VOTE";
+            }
+        }
+
+        function isEqualTo() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            if (x == y) {
+                document.getElementById("display-text").innerHTML =
+                    "THIS TWO NUMBERS IS EQUAL";
+            } else {
+                document.getElementById("display-text").innerHTML =
+                    "THIS TWO NUMBER ARE NOT EQUAL";
+            }
+        }
+
+        function Interchange() {
+            let x = document.getElementById("input-one").value;
+            let y = document.getElementById("input-two").value;
+            document.getElementById("input-one").value = y;
+            document.getElementById("input-two").value = x;
+            document.getElementById("display-text").innerHTML =
+                "YOUR VALUE's ARE ENTERCHANGED";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="display" id="display-text" class="display-text">THIS IS MY EVEN / ODD PROJECT
+        </div>
+        <div class="input-section">
+            <input type="number" id="input-one" class="input-no" />
+            <input type="number" id="input-two" class="input-no" />
+        </div>
+        <button class="custom-button" onclick="evenOrOdd()">Even or Odd</button>
+        <button class="custom-button" onclick="isEligable()">Vote is Eligible or Not</button>
+        <button class="custom-button" onclick="isEqualTo()">Equal To or Not-Equal To</button>
+        <button class="custom-button" onclick="Interchange()">Interchange the Numbers</button>
+    </div>
+</body>
+
+</html>
