@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Music Player</title>
+    <style>
+        audio {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        /* THIS IS FOR MAIN-CONTAINER */
+        .container {
+            width: 500px;
+            padding: 50px;
+            background-color: #BFEA7C;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 350px;
+            margin-top: 200px;
+            margin-left: 400px;
+            border-style: solid;
+        }
+
+        /* THIS IS FOR BUTTON*/
+        .btn-one {
+            background-color: transparent;
+            border-style: none;
+            font-size: 35px;
+            margin-left: 40px;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+        .btn-one:hover {
+            color: #265073;
+            border-style: none;
+            font-size: 35px;
+        }
+
+        .btn-two {
+            background-color: transparent;
+            border-style: none;
+            font-size: 35px;
+            margin-top: -110px;
+            margin-left: 140px;
+            display: block;
+        }
+
+        .btn-two:hover {
+            color: #265073;
+            border-style: none;
+            font-size: 35px;
+        }
+
+        .btn-three {
+            background-color: transparent;
+            border-style: none;
+            font-size: 35px;
+            margin-top: -70px;
+            margin-left: 240px;
+            display: block;
+        }
+
+        .btn-three:hover {
+            color: #265073;
+            border-style: none;
+            font-size: 35px;
+        }
+
+        .btn-four {
+            background-color: transparent;
+            border-style: none;
+            font-size: 35px;
+            display: block;
+            margin-left: 340px;
+            margin-top: -70px;
+        }
+
+        .btn-four:hover {
+            color: #265073;
+            border-style: none;
+            font-size: 35px;
+        }
+        .second {
+            background-color: darkseagreen;
+            height: 50px;
+            width: 600px;
+            margin-left: -50px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            display: block;
+            margin-top: -70px;
+        }
+    </style>
+
+</head>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+<body style="margin: 0px; background-image: url(./images/home-page/music_player.jpeg); background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+        <div class="second">
+            <h2 style="color: #fff; text-align: center;">Music Player</h2>
+        </div>
+        <hr color="black" size="2px" width="600px" style="margin-left: -50px; display: block; margin-top: -3px;">
+        &nbsp;
+        <div id="player">
+            <audio id="audio" controls style="width: 500px;">
+                <!-- THIS IS SONG LIST -->
+                <source src="./audio/aam.mp3" type="audio/mpeg">
+                <source src="./audio/Koi.mp3" type="audio/mpeg">
+                <source src="./audio/Kubera.mp3" type="audio/mpeg">
+                <source id="foue" src="./audio/Rollin.mp3" type="audio/mpeg">
+
+            </audio></div>
+            <div>
+            <button id="back" class="btn-one"><i class="ph-bold ph-skip-back"></i></button>
+            <button id="play" class="btn-two"><i class="ph-bold ph-play"></i></button>
+            <button id="pause" class="btn-three"><i class="ph-bold ph-pause"></i></i></button>
+            <button id="next" class="btn-four"><i class="ph-bold ph-skip-forward"></i></button>
+        </div>
+
+        <script>
+            // THIS CODE IS FOR CONTROLE
+            const audio = document.getElementById('audio');
+            const playBtn = document.getElementById('back');
+            const pauseBtn = document.getElementById('play');
+            const nextBtn = document.getElementById('pause');
+            const backBtn = document.getElementById('next');
+
+            playBtn.addEventListener('click', back);
+            pauseBtn.addEventListener('click', play);
+            nextBtn.addEventListener('click', pause);
+            backBtn.addEventListener('click', next);
+
+            // THIS FOR PLAY OUR SONG
+            function play() {
+                audio.play();
+            }
+
+            // THIS IS FOR PAUSE OUR SONG
+            function pause() {
+                audio.pause();
+            }
+
+            // THIS IS FOR PLAY NEXT SONG
+            function next() {
+                alert('Playing Next Song')
+            }
+
+            function back() {
+                // THIS IS FOR PLAY PREVIOUS SONG
+                alert('Playing previous song');
+            }
+        </script>
+    </div>
+</body>
+
+</html>
