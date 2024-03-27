@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Opening of Head Tag -->
+
+     <!-- Starting of Font Family -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+     <!-- Ending of Font Family --> 
+
+     <!-- This is The Title -->
+  <title>
+    Weekday Finder
+  </title>
+  <!-- Opening of Style Tag -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #FFE6E6;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    #weekday {
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+  <!-- Closing of Style Tag -->
+</head>
+<!-- Openung of Head Tag -->
+
+<!-- Starting of Body -->
+<body style="margin: 0px; background-color: #35374B;">
+    <!-- This is Main Container -->
+  <div class="container">
+    <!-- This is the Heading -->
+    <h1 style="font-family: 'Protest Revolution', sans-serif; display: block; margin-top: -15px;">Weekday Finder</h1>
+    <hr width="438px" style="margin-left: -20px;">
+    <label for="weekdayNumber"  style="font-family: 'Protest Revolution', sans-serif;">Enter The Number Between 01-07</label>
+    <input type="number" id="weekdayNumber" min="1" max="7" placeholder="Number Between 01-07" oninput="findWeekday()">
+    <div id="weekday"></div>
+  </div>
+
+<!-- Opening of Script Tag -->
+  <script>
+    function findWeekday() {
+      var weekdayNumber = parseInt(document.getElementById('weekdayNumber').value);
+      var weekdayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var weekdayDiv = document.getElementById('weekday');
+
+      if (!isNaN(weekdayNumber) && weekdayNumber >= 1 && weekdayNumber <= 7) {
+        var weekdayName = weekdayNames[weekdayNumber - 1];
+        weekdayDiv.textContent = "The weekday corresponding to the number " + weekdayNumber + " is " + weekdayName + ".";
+      } else {
+        weekdayDiv.textContent = "Please Enter the Number Between 01-07";
+      }
+    }
+  </script>
+  <!-- Closing of Script Tag -->
+
+  <!-- Ending of Body -->
+</body>
+</html>
