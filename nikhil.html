@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0%;
+                padding: 0%;
+            }
+            video {
+                position: absolute;
+                right: 0;
+                bottom: 0%;
+                z-index: -1;
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+            }
+            ul {
+                display: flex;
+                list-style: none;
+                color: white;
+            }
+            ul li a {
+                margin-inline: 20px;
+                margin-right: 20px;
+            }
+            .navbar h1 {
+                color: white;
+                margin-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-div">
+            <video src="./videos/enjoy.mp4" type="video" loop autoplay muted></video>
+            <div class="navbar">
+                <div class="logo">
+                    <h1>Fitness<span>.</span>.</h1>
+                </div>
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>Above</a></li>
+                    <li><a>Trainer</a></li>
+                    <li><a>Offer</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-page">
+            <h1>Take Control of Your "<span>Health</span>".</h1>
+            <button>Explore</button>
+        </div>
+    </body>
+</html>

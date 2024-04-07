@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* Mine */
+        .Niks {
+            text-align: center;
+
+        }
+
+        .h3 {
+            margin: 5px;
+        }
+
+        .skill {
+            width: 500px;
+            margin: 60px auto;
+            color: #fff;
+            margin-top: -205px;
+            border-style: double;
+            border-color: #76ABAE;
+            padding: 20px;
+            background-color: #31363F;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        .skill li {
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .bar {
+            background: #353b48;
+            display: block;
+            height: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .bar:hover {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+        }
+
+        .bar span {
+            height: 20px;
+            float: left;
+            background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
+        }
+
+        .html {
+            width: 80%;
+            animation: html 3s;
+        }
+
+        .css {
+            width: 65%;
+            animation: css 3s;
+        }
+
+        .javascript {
+            width: 15%;
+            animation: javascript 3s;
+        }
+
+        /* Animation of Bar*/
+        @keyframes html {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 80%;
+            }
+        }
+
+        @keyframes css {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 65%;
+            }
+        }
+
+        @keyframes javascript {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 15%;
+            }
+        }
+
+        /* End of Mine */
+        .header,
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .projects-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .project-card {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .project-card h2 {
+            margin-top: 0;
+        }
+
+        .best-main {
+            width: 100%;
+            height: 300px;
+            margin: 0px;
+            padding: 0px;
+            background-color: #31363F;
+        }
+
+        /* This code is for All Division */
+        .F-Button {
+            border-style: solid;
+            background-color: #DDDDDD;
+            border-color: #135D66;
+            height: 50px;
+            width: 160px;
+            border-radius: 15px;
+            display: block;
+
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .S-Button {
+            border-style: solid;
+            background-color: #DDDDDD;
+            border-color: #135D66;
+            height: 50px;
+            width: 160px;
+            border-radius: 15px;
+            display: block;
+
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        /* This Code is for All Buttons Hovers*/
+        .F-Button:hover {
+            border-style: solid;
+            background-color: #BC7FCD;
+            border-color: #005001;
+            height: 50px;
+            width: 160px;
+            font-family: cursive;
+            border-radius: 15px;
+            margin-left: 10px;
+        }
+
+        .S-Button:hover {
+            border-style: solid;
+            background-color: #BC7FCD;
+            border-color: #005001;
+            height: 50px;
+            width: 160px;
+            font-family: cursive;
+            border-radius: 15px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="font-family: cursive; text-align: center;">
+        <marquee behavior="repeat" direction="right">
+            <h1 style="color: crimson;">⛧&ensp;&ensp;My Home Page&ensp;&ensp;⛧</h1>
+        </marquee>
+    </header>
+    <hr color="blue">
+
+    <!-- First Main-Division -->
+    <div style="border-style: solid; height: 200px; background-color: #77B0AA; width: 300px; margin-left: 10px;">
+        <!-- This is Heading -->
+        <h3
+            style="text-align: center; margin-top: -0px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #E72929;">
+            My Some Accounts</h3>
+        <hr color="black">
+        <!-- That is Gmail -->
+        <img style="height: 10%; width: 10%; border-radius: 100%;" src="./images/normal-uses/G-Mail.png">
+        <a href="https://mail.google.com/mail/u/0/#inbox">
+            <h5 style="margin-left: 40px; margin-top: -20px; color: darkblue;">shalitabhaiswar@gmail.com</h5>
+        </a>
+        <br>
+        <br>
+        <!-- This is GitHub -->
+        <img style="height: 10%; width: 10%; border-radius: 100%; margin-top: -35px; display: block;"
+            src="./images/normal-uses/GitHub.jpg">
+        <a href="https://github.com/Nikhil78945/Best-htmlProject">
+            <h5 style="margin-left: 40px; margin-top: -20px; color: darkblue;">GitHub Account</h5>
+        </a>
+        <br>
+        <br>
+        <!-- This is Skype -->
+        <img style="height: 10%; width: 10%; border-radius: 100%; margin-top: -35px; display: block;"
+            src="./images/normal-uses/Skype.jpg">
+        <a href="https://join.skype.com/invite/yeESYVwQtpON">
+            <h5 style="margin-left: 40px; margin-top: -20px; color: darkblue;">Skype Account</h5>
+        </a>
+    </div>
+    <!-- This is Learn by Youtube -->
+    <div class="skill">
+        <h1 class="Niks" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">My
+            Skills</h1>
+        <li>
+            <h3 class="h3">HTML&ensp;(80%)</h3>
+            <span class="bar"><span class="html"></span></span>
+        </li>
+        <li>
+            <h3 class="h3">CSS&ensp;(65%)</h3>
+            <span class="bar"><span class="css"></span></span>
+        </li>
+        <li>
+            <h3 class="h3">JavaScript&ensp;(15%)</h3>
+            <span class="bar"><span class="javascript"></span></span>
+        </li>
+    </div>
+    <!-- Second Main-Division -->
+    <div
+        style="border-style: solid; height: 250px; background-color: #77B0AA; width: 300px; float: right; margin-top: -465px; margin-right: 10px;">
+        <!-- This is Heading -->
+        <h3
+            style="text-align: center; margin-top: -0px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #E72929;">
+            About Me</h3>
+        <hr color="black">
+        <p style="font-family: 'Times New Roman', Times, serif;">Hello, I am Nikhil Surendra Bhaiswar.I am Studying in
+            class 9th in B.R.High School,Katol.I am doing coding in <i><b>Enjoy Programming Institute</b></i>.I Know
+            HTML,CSS and JavaScript.My dream is to become a <i><b>Full Stack Developer</b></i>.I like to play
+            <i><b>Cricket</b></i>.I love Maths and English.My Hobbys is "Chess, Coding, Gaming, Reading, etc".My
+            favourite Festival is <b>Diwali</b>.I passed out <b>NMMS</b> exam in 2022 and also <b>Culture Knowledge
+                Test</b>.
+        </p>
+    </div>
+    <div class="best-main">&ensp;
+        <!-- This is Bill -->
+        <div class="F-Button">
+            <a href="bill.html">
+                <h4 style="color: black; text-align: center; margin-top: 10px; margin-top: 15px;">Electicity Bill</h4>
+            </a>
+        </div>
+
+        <!-- This is Calculator -->
+        <div class="S-Button">
+            <a href="bill.html">
+                <h4 style="color: black; text-align: center; margin-top: 10px; margin-top: 15px;">Electicity Bill</h4>
+            </a>
+        </div>
+    </div>
+    <main>
+        <section class="projects-list">
+            <!-- Projects will be displayed here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Projects</p>
+    </footer>
+</body>
+
+</html>
