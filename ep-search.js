@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        let ul = document.createElement('ul');
+        let ul = document.createElement('ol');
 
         results.forEach(result => {
             let li = document.createElement('li');

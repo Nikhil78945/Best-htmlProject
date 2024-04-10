@@ -5,15 +5,17 @@
 <!-- THAT IS HEAD -->
 
 <head>
-
     <link rel="shortcut icon" type="x-icon" href="./images/home-page/ep-home.jpg">
-
     <!-- THIS IS TITLE -->
     <title>
         ENJOY PROGRRAMING
     </title>
 
     <style>
+        body {
+            list-style: none;
+            background-color: #ACE2E1;
+        }
         .search-container {
             display: flex;
             justify-content: center;
@@ -47,34 +49,50 @@
         #searchResults {
             margin-top: 20px;
         }
+
         video {
             position: absolute;
-                right: 0;
-                bottom: 0%;
-                z-index: -1;
+            right: 0;
+            bottom: 0%;
+            z-index: -1;
         }
     </style>
 </head>
 
 <body style="margin: 0px;">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="ep-search.js"></script>
- <video id="background-vedio" autoplay loop muted
-        poster="./videos/enjoy.mp4">
-        <source src="./videos/enjoy.mp4" type="video/mp4"> 
-     </video>
-    <marquee behavior="altirnate" direction="right" style="font-family: cursive; color: crimson;">
-        <h1>★ &ensp; My Search Bar &ensp; ★</h1>
-    </marquee>
+        <h1 style="color: #A0153E; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Enjoy Programming Search Bar</h1>
     <hr color="#58A399">
-    <img style="height: 3%; width: 3%; border-radius: 50%; float: right;" src="./images/home-page/ep-home.jpg">
+    <h5 style="margin-left: 1275px; font-size: 20px;">Gmail</h5>
+    <h1 style="margin-left: 1350px; margin-top: -60px;"><i class=" ph-bold ph-dots-nine"></i></h1>
+    <img style="height: 35px; width: 35px; border-radius: 50%; float: right; margin-top: -63px; margin-right: 10px;"
+        src="./images/home-page/Enjoy-Programming.jpeg">
+    <img style="height: 20%; width: 20%; margin-top: -150px; display: block; margin-left: 550px;"
+        src="./images/home-page/EP-BG remove.png">
+        <h2 style="text-align: center; color: #fff; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Enjoy Programming</h2>
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search..." style="font-family: cursive;">
         <button id="searchButton" style="font-family: cursive;">Search</button>
-    </div>
-    <h1></h1>
-    <div style="font-family: cursive; color: white;" id="searchResults">
+    </div> &ensp;
+    <!-- Input Tag -->
+    <input style="color: #fff; background-color: #393E46; margin-top: 10px; height: 35px; margin-left: 525px;" class="RNmpXc" value="Enjoy Programming Search" aria-label="I'm Feeling Lucky" name="btnI" type="submit"
+        jsaction="trigger.kWlxhc" data-ved="0ahUKEwjlp6OZw7SFAxUgzDgGHb6_BDYQ19QECB0">
+        &ensp;
+        &ensp;
+        &ensp;
+        &ensp;
+        &ensp;
+        <!-- Second Input -->
+        <input style="color: #fff; background-color: #393E46; margin-top: 10px; height: 35px;" class="RNmpXc" value="Best of Luck" aria-label="I'm Feeling Lucky" name="btnI" type="submit"
+        jsaction="trigger.kWlxhc" data-ved="0ahUKEwjlp6OZw7SFAxUgzDgGHb6_BDYQ19QECB0">
+    <h4 style="text-align: center;">Enjoy Programming offered in: हिन्दी &ensp; বাংলা &ensp; తెలుగు &ensp; मराठी <br>
+        &ensp; தமிழ் &ensp;
+        ગુજરાતી &ensp; ಕನ್ನಡ &ensp; മലയാളം &ensp; ਪੰਜਾਬੀ</h4>
+    <div style="font-family: cursive; color: #181D31; text-align: center;" id="searchResults">
         <!-- SEARCH RESULT WILL BE DISPLAYED HERE-->
     </div>
 </body>
+
 
 </html>
